@@ -253,3 +253,49 @@ print(euros_per_dollar)
 rubles_per_dollar = 60
 rubles_count = euros_per_dollar * rubles_per_dollar # 7500,0
 print(rubles_count)
+
+#31.03.2024
+
+#именование
+
+x = 'Father'
+print(x)
+
+# именование переменных
+# kebab-case соотавные части перемененой разделяются дефисом (my-super-var)
+# snake_case для разделения используется подчеркивание (my_super_var)
+# CamelCase  каждое слово в переменной пишется с заглавной буквы (MySuperVar)
+
+#Магические числа MAGIC NUMBERS
+
+euros_count = 1000
+# BEGIN (write your solution here)
+dollar_count = euros_count * 1.25 # 1250.0
+rubles_count = dollar_count * 60 # 75000,0
+
+print(rubles_count)
+
+dollars_per_euro = 1.25
+rubles_per_dollar = 60
+
+euros_count = 1000
+dollars_count = euros_count * dollars_per_euro # 1250.0
+rubles_count = dollar_count * rubles_per_dollar # 75000,0
+
+print(rubles_count)
+
+#используется именование snake_case 
+#две  новые переменные отделяются от последующих вычеслений пустой строчкой. код должен быть читабельным.
+
+#вы столкнулись с таким кодомб который выводит на экран общее количество комнат во владении нынешнего короля.
+# king = 'King Balon the 6 th'
+# функция str() превращает число в строку 
+# 0 таких превращениях  будет отдельный урок
+# print(king + ' has ' + str(6*17) + ' rooms.')  => King Balon the 6th 102 rooms. 
+
+name_king = 'King Balon 6th '
+
+generation = 6 # every next generation + 1
+number_of_rooms_for_one_generation = 17
+
+print(name_king + ' has ' + str(generation * number_of_rooms_for_one_generation) + ' rooms.')  #=> King Balon the 6th 102 rooms. 
