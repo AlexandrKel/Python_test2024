@@ -299,3 +299,66 @@ generation = 6 # every next generation + 1
 number_of_rooms_for_one_generation = 17
 
 print(name_king + ' has ' + str(generation * number_of_rooms_for_one_generation) + ' rooms.')  #=> King Balon the 6th 102 rooms. 
+
+#05.04.2024 ИНТЕРПОЛЯЦИЯ
+
+#конкатенация
+
+first_name = 'Joffrey'
+greeting = 'Hello'
+
+print(greeting + ", " + first_name + "!") #=> Hello, Joffrey!
+
+# альтернатива конкатенации - интерполяция (буква f указываетб что мы создаем f-строку)
+
+first_name = 'Joffrey'
+greeting = 'Hello'
+
+print(f'{greeting}, {first_name}!') #=> Hello, Joffrey!
+
+school = 'Hexlet'
+
+what_is_it= f'{school} - online courses'
+print(what_is_it) #=> Hexlet - online courses
+
+#Multi-line строки
+
+# перевод строки \n
+
+text = 'Пример текста, \nсостоящего из \nнескольких строк'
+print(text)
+
+#multi-line строки
+
+text = '''Пример текста,
+состоящегго из
+нескольких строк
+'''
+
+print(text)
+
+#пустая строка в конце (можно убратьб если поставим закрытие ковычек в последней строке текста)
+
+text = '''Пример текста,
+состоящегго из
+нескольких строк''' #благодаря тройным ковычкам multi-line строки позволяют не экранированть кавычки внутри строки (не нужно экранировать 'одинарные'  и "двойные" кавычки)
+
+print(text)
+
+#еще multi-line строки могут становиться f-строками для интерполяции
+
+a = 'A'
+b = 'B'
+
+#Слева добавился f
+
+text = f'''{a} и {b}
+сидели на трубе
+'''
+
+print(text)
+
+stark = 'Arya'
+
+print(f'''{"Do you want to eat,"} {stark}?
+{"Yes, I'm hungry, mom."}''')
