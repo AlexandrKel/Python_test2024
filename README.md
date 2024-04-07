@@ -362,3 +362,61 @@ stark = 'Arya'
 
 print(f'''{"Do you want to eat,"} {stark}?
 {"Yes, I'm hungry, mom."}''')
+
+
+#07.04.2024 Извлечение символов из строки
+
+# Извлечение элемента по индексу 
+
+first_name = 'Alexandr'
+
+print(first_name[0]) #=> A
+
+#длина строки 9б поэтому последний индекс - это 8
+
+first_name = 'Alerxandr'
+
+print(first_name[8]) #=> r
+
+# print(first_name[9])
+#---------------------------------------------------------------------------
+#IndexError                                Traceback (most recent call last)
+#<ipython-input-5-1886f12f2362> in <cell line: 7>()
+#      5 print(first_name[8]) #=> r
+#      6 
+#----> 7 print(first_name[9])
+#
+#IndexError: string index out of range
+
+magic = '\nyou'
+print(magic) #=> you
+print(magic[1])
+
+#отрицательные индексы
+#отрицательные индексы начинаются с -1 
+
+first_name = 'Alexandr'
+
+print(first_name[-1])
+
+# индексом может быть не только число, но и значение переменной
+
+first_name = 'Alexandr'
+index = 0
+
+print(first_name[index]) #=> A
+
+name1 = "John"
+name2 = "Tom"
+name3 = "Emily"
+
+print(name1[0] + name3[2] + name2[2])  #=> Jim
+
+one = 'Naharis'
+two = 'Mormont'
+three = 'Sand'
+
+text = f'''{one[2]}{two[1]}{three[3]}{two[4]}{two[2]}
+'''
+
+print(text)
