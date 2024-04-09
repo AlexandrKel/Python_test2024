@@ -546,3 +546,120 @@ begin = -4
 end = 5
 
 print(value[begin:end]) # 'xle'
+
+
+
+#09.04.2024
+# ТИПЫ ДАННЫХ
+
+"hELLO, WORLD" #  строки
+'1','-198','0' # целые числа
+
+# тип данных определяет, что можно делать с эллементами конкретного множества информации.
+
+# Примитивные типы данных
+
+print(5) # => 5 в отличие от строк, числа заключаются в кавычки
+
+print(1,34,-19) #целые числа
+
+print(1.3,1.0,-14.324) # рациональные числа
+
+print(10.324)
+
+# line - строчка
+# strings - строка
+
+# Сильная типилизация -строгая типизация 
+
+# PHP, JavaScript - слабая типизация
+
+# // Как тебе такое, Илон Маск?
+# // Число 1 + Строка 7 = Строка 17
+# 1+'7';//'17'
+# 
+#  File "<ipython-input-8-d6f9ba084ba6>", line 6
+#     // Число 1 + Строка 7 = Строка 17
+#     ^
+# SyntaxError: invalid syntax
+
+# Неизменяемость примитивных типов  (ключевая причина - производительность)
+
+# изменить символ в строке 'str'
+
+# frist_name = 'Alexander'
+# first_name[0] = 'B' 
+# 
+# NameError                                 Traceback (most recent call last)
+# <ipython-input-13-a91784f3afba> in <cell line: 4>()
+#       2 
+#       3 frist_name = 'Alexander'
+# ----> 4 first_name[0] = 'B'
+# 
+# NameError: name 'first_name' is not defined
+
+first_name = 'Alexandr'
+first_name = 'Blexandr'
+
+print(first_name)
+
+# примитивные типы в Python поменять нельзя, а составные можно. Также можно без проблем заменитьб значение переменной.
+
+# Явное преобразование типов данных
+
+# str станет int
+
+number = int('345')
+
+print(number)
+
+value = '0' # внутри скобки можно указывать переменную
+
+convered_value = int(value)
+
+print(convered_value) #=> 0 
+
+convered_value2 = int('10')
+
+print(convered_value2) #=> 10 
+
+convered_value3 = int(False)
+
+print(convered_value3) #=> 0 
+
+convered_value4 = int(True)
+
+print(convered_value4) #=> 1 
+
+# если перобразуется число с плавающей точкойб то отбрасывается вся дробная часть
+
+convered_value5 = int(3.5)
+
+print(convered_value5) #=> 3
+
+# точно так же можно преобразовать данные в строки str() и число с плавающей точкой float()
+
+value = str(10)
+print(value) #=> 10
+
+value2 = str(True)
+print(value2) #=> 'True'
+
+value3 = float(5)
+print(value3) #=> 5.0
+
+# где встречаются одновременнно целое число и число с плавающей точкой, Python автоматически все приводит к float - числу с плавающей точкой
+
+value = 3 +1.2
+
+print(value)  # => 4.2
+
+0.2 + 0.1
+
+print(0.2 + 0.1) #операции с плавающей точкой не точны по причине ограничений вычислительных мощностей
+
+value = '2' 
+
+convered_value = str(value)+' times'
+
+print(convered_value) #=> 2 times
