@@ -660,6 +660,32 @@ print(0.2 + 0.1) #операции с плавающей точкой не то�
 
 value = '2' 
 
+# НЕИЗМЕНЯЕМОСТЬ И ПРИМИТИВНЫЕ ТИПЫ
+
+# функция abs() делает число неотрицательным
+
+balanse = - 200
+amount = abs(balanse)
+
+print(amount) #=> 200
+
+print(balanse) # примитивные  типы (простые типы данных) в Python неизменыемы 
+
+balance = -200
+balance = abs(balance)
+
+print(balance)
+
+num = -55
+print(abs(num))
+
+value = "-42"
+
+convered_value = int(value)
+value = abs(convered_value)
+print(value)
+
+
 convered_value = str(value)+' times'
 
 print(convered_value) #=> 2 times
