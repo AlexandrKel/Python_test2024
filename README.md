@@ -719,6 +719,20 @@ result = len('company1') + len('company2')
 
 print(result)
 
+company1 = "Apple"
+company2 = "Samsung"
+
+value = len(company1) + len(company2)
+
+print(value) #привильно
+
+company1 = 'Apple'
+company2 = 'Samsung'
+
+value = len(company1) + len(company2)
+
+print(value) # Apple (5 букв) + Samsung (7 букв)
+
 convered_value = str(value)+' times'
 
 print(convered_value) #=> 2 times
