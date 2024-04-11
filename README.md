@@ -686,6 +686,39 @@ value = abs(convered_value)
 print(value)
 
 
+#11.04.2024
+# ФУНКЦИИ И ИХ ВЫЗОВ 
+
+# ФУНКЦИЯ len() считает длину той строки, которую ей передали.
+
+result = len('Hello!') #=> result это переменная
+print(result) #=> 6
+
+
+# ФУНКЦИЯ pow() возводит указанное число в нужную стпепень.
+
+result = pow(2, 3) #=> 2 * 2 * 2
+print(result) #=> 8
+
+#в коде программы определены две переменные, посчитайте их общую длину в символах и выведите на экран.
+
+company1 = "Apple"
+company2 = "Samsung"
+
+value1 = len('company1')
+value2 = len('company2') 
+
+result = value1 + value2
+
+print(result)
+
+company1 = "Apple"
+company2 = "Samsung"
+
+result = len('company1') + len('company2')
+
+print(result)
+
 convered_value = str(value)+' times'
 
 print(convered_value) #=> 2 times
