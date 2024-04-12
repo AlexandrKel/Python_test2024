@@ -736,3 +736,34 @@ print(value) # Apple (5 букв) + Samsung (7 букв)
 convered_value = str(value)+' times'
 
 print(convered_value) #=> 2 times
+
+
+# 12.04.2024
+# СИГНАТУРА ФУНКЦИИ
+
+#pow(x, y[,z]) # возвращает x в степени y; если z присутствует, возвращает x в степень y
+
+#функция round() округляет переданное ей число
+
+result = round(10.25, 0) #10.0 (число которое нужно округлить и точно округления)
+
+print(result)
+
+result = round(10.25, 1)
+
+print(result) #10.2
+
+result = round(10.25, 2)
+
+print(result) #10.25
+
+result = abs(-20)
+
+print(result)
+
+num1 = 10
+num2 = -13
+
+value = abs(num1 + -13)
+
+print(value)
