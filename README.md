@@ -816,3 +816,32 @@ print(get_one)
 #print(result) # =>13
 
 hex(10) # => 0xa
+
+
+number = 10.1234 # => 0xa
+number_hex = int(round(number, 0)) #10.0 (число которое нужно округлить и точно округления)
+hex(number_hex)
+print(number_hex)
+
+#number = 10.1234
+#
+#hex('number')
+#
+#print(hex)
+
+number = 10.1234 # => 0xa
+number_hex = int(round(number, 0)) #10.0 (число которое нужно округлить и точно округления)
+hex(number_hex)
+print(number_hex)
+
+#number = 10.1234
+#
+#hex('number')
+#
+#print(hex)
+
+
+number = 10.1234
+hex_string = hex(int(number))
+
+print(hex_string)  # 0xa
