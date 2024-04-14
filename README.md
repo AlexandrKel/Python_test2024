@@ -845,3 +845,201 @@ number = 10.1234
 hex_string = hex(int(number))
 
 print(hex_string)  # 0xa
+
+
+#13.04.2024
+
+# ВЫЗОВ ФУНКЦИИ - ВЫРАЖЕНИЕ
+
+# Что принимается за выражение
+
+1 + 5 * 3
+
+'He' + 'Let'
+
+# переменные могут быть частью выражения
+
+# rate * 5
+
+sum = 1 + 5 # тут выражение - это 1 + 5
+print(1 + 5)
+
+print(sum)
+
+# бессмысленный кодб который не работает
+# 10 + sum = 1 + 5
+
+# можно ли сччитать вызов функции выражением
+
+name = 'python'
+#индексы начинаются с нуля
+#Вызов функции и вычитание вместе
+
+last_index = len(name) - 1
+
+print(last_index) #=> 5
+
+name = 'python'
+#используется интерполяция
+
+print(f'Последний символ: {name[len(name) - 1]}') # = > 'Последний символ: n'
+
+def get_one():
+  return 1
+
+print(get_one)
+
+#result = sum_(sum_(1, 3), sum_(sum_(4, 2), 3))
+#
+#print(result) # =>13
+
+hex(10) # => 0xa
+
+
+number = 10.1234 # => 0xa
+number_hex = int(round(number, 0)) #10.0 (число которое нужно округлить и точно округления)
+hex(number_hex)
+print(number_hex)
+
+#number = 10.1234
+#
+#hex('number')
+#
+#print(hex)
+
+number = 10.1234 # => 0xa
+number_hex = int(round(number, 0)) #10.0 (число которое нужно округлить и точно округления)
+hex(number_hex)
+print(number_hex)
+
+#number = 10.1234
+#
+#hex('number')
+#
+#print(hex)
+
+
+number = 10.1234
+hex_string = hex(int(number))
+
+print(hex_string)  # 0xa
+
+
+ print "YES"
+
+ # Детерменированная функция
+
+len = ('hexlet') # 6
+print(len)
+
+len = ('wow') # 6
+print(len)
+
+from random import random
+
+random( ) # функция random( ) возвращает случайное число
+
+random( )
+
+print(random() * 10)
+
+print(random() * 10)
+
+from random import randint
+
+import random
+
+print(random.randint(1, 10))
+
+randint(1,10)
+print(random.randint)
+
+random.randint(1, 10)
+
+from random import randint
+
+print(random.randint(1, 10))
+
+from random import randint
+print(random.randint(1, 10))
+
+from random import randint
+r1 = random.randint(0, 10)
+print("Random number between 0 and 10 is % s" % (r1))
+
+beg,end=1,1000
+for i in range(5):
+    print(random.randint(beg, end))
+
+
+
+# importing randint function
+# from random module
+from random import randint
+ 
+# Function which generates a new 
+# random number everytime it executes
+def generator():
+    return randint(1, 10)
+     
+# Function takes user input and returns
+# true or false depending whether the
+# user wins the lucky draw!
+def rand_guess():
+ 
+    # calls generator() which returns a
+    # random integer between 1 and 10
+    random_number = generator()
+     
+    # defining the number of
+    # guesses the user gets
+    guess_left = 3
+ 
+    # Setting a flag variable to check
+    # the win-condition for user
+    flag = 0
+ 
+    # looping the number of times
+    # the user gets chances
+    while guess_left > 0:
+ 
+        # Taking a input from the user
+        guess = int(input("Pick your number to "
+                    "enter the lucky draw\n"))
+ 
+        # checking whether user's guess
+        # matches the generated win-condition
+        if guess == random_number:
+ 
+            # setting flag as 1 if user guesses 
+            # correctly and then loop is broken
+            flag = 1
+            break
+         
+        else:
+             
+            # If user's choice doesn't match
+            # win-condition then it is printed
+            print("Wrong Guess!!")
+ 
+        # Decrementing number of 
+        # guesses left by 1 
+        guess_left -= 1
+ 
+    # If win-condition is satisfied then,
+    # the function rand_guess returns True
+    if flag is 1:
+        return True
+ 
+    # Else the function returns False
+    else:
+        return False
+ 
+# Driver code
+if __name__ == '__main__':
+    if rand_guess() is True:
+        print("Congrats!! You Win.")
+    else :
+        print("Sorry, You Lost!")
+      
+
