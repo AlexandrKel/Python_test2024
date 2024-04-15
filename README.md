@@ -1039,6 +1039,85 @@ def rand_guess():
 if __name__ == '__main__':
     if rand_guess() is True:
         print("Congrats!! You Win.")
+
+#15.04.2024
+
+print("Hello world")
+
+# Addition Метод add добавляет элементы в множество. Если элемент уже есть в множестве, то он не дублируется и множество остается в исходном состоянии.
+
+num1 = float(input("Enter first number: ")) #float -предоставляет возможность преобразования объекта в число с плавающей точкой (дробными числами или операции, требующие точности до десятичных знаков.
+num2 = float(input("Enter second number: ")) #input() , функция которая возвращает в программу введённую пользователем строку.
+sum_result = num1 + num2
+
+print(f"sum: {num1} + {num2} = {sum_result}")
+
+# Division - выполняет целочисленное деление над значениями
+
+num3 = float(input("Enter the divided for division")) # divide - деление с остатком — самая простая для понимания операция деления в Python
+num4 = float(input("Enter the divisor for division:")) #divisor for division
+if num4 == 0:
+  print("error: Division by zero is not allowed. ")
+else: 
+  div_result = num3 / num4
+
+  print(f"Division: {num3} / {num4} = {div_result}")
+
+  # Обычное деление
+
+print(5 / 2) # 2.5 
+
+print(int(5) / int(2)) # 2.5
+
+print(1 / 3) # 0.3333333333333333
+
+# Деление без остатка
+
+print(5 // 2) # 2
+
+print(5 // 2.0) # 2.0
+
+print(5 // int(2.0)) # 2
+
+print(int((5.0) // 2)) # 2
+
+# Как найти остаток или деление по модулю
+
+print(10 % 3) # 1
+
+def is_even(number):
+    # Если остаток от деления на 2 равен нулю, то число чётное
+    if number % 2 == 0:
+        print('Число чётное')
+    else:
+        print('Число нечётное')
+
+is_even(12) # Число чётное
+is_even(13) # Число нечётное
+
+# Деление на ноль
+
+a = 10
+b = 0
+
+try:
+    result = a / b
+except ZeroDivisionError:
+    print("Делить на ноль нельзя!")
+else:
+    print(result)
+
+    # Сокращённая запись
+
+a = 10
+a = a // 2 # В итоге в переменной a будет храниться число 5
+
+print(a)
+
+a = 10
+a //= 2 # В этом случае в переменной a тоже будет число 5
+
+print(a)
     else :
         print("Sorry, You Lost!")
       
