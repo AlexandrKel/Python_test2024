@@ -1122,3 +1122,30 @@ print(a)
         print("Sorry, You Lost!")
       
 
+#16.04.2024
+
+# Write program to find the area of a triangle // Напишите программу для нахождения площади треугольника 
+
+# Input the base and height from the user
+base = float(input("Enter the length of the base of the triangle: "))
+height = float(input("Enter the height of the triangle: "))
+
+area = 0.5 * base * height # Calculate the area of the triangle 
+
+print(f"The area of the triangle is: {area} ") # display the result
+
+# Write program to swap two variables // Напишите программу, чтобы поменять местами две переменные
+
+
+a = input("Enter the value of the first variable (a): ") # input two variables
+b = input("Enter the value of the first variable (b): ")
+
+print(f"Original values: a = {a}, b = {b}") # display the original values
+
+# swap the values using a temporary variable
+
+temp = a
+a = b
+b = temp
+
+print(f"Swapped values: a = {a}, b = {b}") # display the swapped values
