@@ -1149,3 +1149,27 @@ a = b
 b = temp
 
 print(f"Swapped values: a = {a}, b = {b}") # display the swapped values
+
+
+#17.04.2024
+
+# Write program to generate a random number
+
+import random
+print(f"Random number: {random.randint(1, 100)}")
+
+# Write program to convert kilometers to miles
+
+kilometers = float(input("Enter distance in kilometers: ")) 
+conversation_factor = 0.621371 # Conversation factor: 1 kilometer = 0.621371 miles
+
+miles = kilometers * conversation_factor
+
+print(f"{kilometers} kilometers is equal to {miles} miles")
+
+# Write program to convert Celsius to Farenheit
+
+Celsius = float(input("Enter temperature in Celsius: ")) 
+fahrenheit = (Celsius * 9/5) + 32 # Conversation formula: Fahrenheit = (Celsius * 9/5) + 32
+
+print(f"{Celsius} degrees Celsius is equal to {fahrenheit} degrees Fahrenheit")
