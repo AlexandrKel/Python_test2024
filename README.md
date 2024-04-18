@@ -1173,3 +1173,56 @@ Celsius = float(input("Enter temperature in Celsius: "))
 fahrenheit = (Celsius * 9/5) + 32 # Conversation formula: Fahrenheit = (Celsius * 9/5) + 32
 
 print(f"{Celsius} degrees Celsius is equal to {fahrenheit} degrees Fahrenheit")
+
+# 18.04.2024
+# write program to display calendar
+
+import calendar
+
+year = int(input("Enter year: "))
+month = int(input("Enter month: "))
+
+cal = calendar.month(year, month)
+
+print(cal)
+
+# Write program to solve quadratic equation // Напишите программу для решения квадратного уравнения 
+
+#         the standart form of a quadratic equation is:
+#         ax² + bx + c = 0
+#           where
+#         a, b and c real numbers
+#         a ≠ 0
+#         the solutions of this quadratic equation is given by:
+
+#        ( -b ±(b¹/² - 4ac)²)/(2a)  
+
+import math
+
+# input coefficients
+a = float(input("Enter coefficients a: "))
+b = float(input("Enter coefficients b: "))
+c = float(input("Enter coefficients c: "))
+
+discriminant = b**2 - 4*a*c # calculate the discriminant
+
+# Check if the discriminant is positive, negative, or zero
+
+if discriminant > 0:
+  # two real and distinct roots
+  root1 = (-b + math.sqrt(discriminant)) / (2*a)
+  root2 = (-b - math.sqrt(discriminant)) / (2*a)
+  print(f"Root 1: {root1}")
+  print(f"Root 2: {root2}")
+elif discriminant == 0:
+  # one real root (repeated)
+  root = -b / (2-a)
+  print(f"Root: {root}")
+else:
+  #complex roots
+  real_part = -b / (2*a)
+  imaginary_part = math.sqrt(abs(discriminant)) / (2*a)
+
+  print(f"Root1: {real_part} + {imaginary_part}i")
+  print(f"Root2: {real_part} - {imaginary_part}i")
+
