@@ -1223,6 +1223,55 @@ else:
   real_part = -b / (2*a)
   imaginary_part = math.sqrt(abs(discriminant)) / (2*a)
 
+  # 20.04.2024
+
+# write program to swap two variables without temp variable // Напишите программу для замены двух переменных без временной переменной
+
+a = 5
+b = 10
+
+a, b = b, a # swapping without a tyemporary variable // Замена без временной переменной
+
+print("After swapping")
+print("a=", a)
+print("b", b)
+
+# write program to cheak if a number is Positive, Negative or Zero //написать программу для проверки, является ли число положительным, отрицательным или нулевым
+
+
+num = float(input("Enter a number"))
+
+if num > 0:
+  print("Positive number")
+elif num == 0:
+  print("Zero")
+else:
+  print("NHegative number")
+
+  # write program to cheack if a Number is Add or Even // напишите программу для проверки того, является ли число четным или нечетным
+
+num = int(input("Enter a number"))
+
+if num%2 ==0:
+  print("This is a even number")
+else:
+  print("This is a odd number")
+
+# Write program to cheack Leap Year
+
+year = int(input("Enter a year: "))
+# divided by 100 means century tear (ending with 00) # деленное на 100 означает столетний разрыв (заканчивается на 00)
+# century year divided by 400 is leap year # Вековой год, деленный на 400, является високосным 
+
+if (year % 400 == 0) and (year % 100 == 0):
+  print("{0} is not leap year".format(year))
+
+# if not divided by both 400 (century year) and 4 (not century year) 
+# year is not Leap year
+
+else:
+  print("{0} is a leap year".format(year))
+
   print(f"Root1: {real_part} + {imaginary_part}i")
   print(f"Root2: {real_part} - {imaginary_part}i")
 
