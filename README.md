@@ -1275,3 +1275,114 @@ else:
   print(f"Root1: {real_part} + {imaginary_part}i")
   print(f"Root2: {real_part} - {imaginary_part}i")
 
+# 21.04.2024
+
+# write program to check prime number # написать программу для проверки простого числа 
+
+# Prime number # простое число 
+
+# A prime number is a whole number that cannot be venly divided by any other number # Простое число - это целое число, которое не может #делиться на любое другое число 
+# except for 1 and itself. For example,  2,3,5,7,11 and 13 are prime number because they #кроме 1 и самого себя. Например, 2, 3, 5, 7, 11 и 13 #являются простыми числами, потому что они
+# cannot be divided by any other positive integer except for 1 and their own value # не может делиться ни на какое другое целое положительное #число, кроме 1 и собственного значения
+
+num =  int(input("Enter a number: "))
+
+flag = False #Define a flag variable
+
+if num == 1:
+  print(f"{num}, is not a prime number")
+elif num > 1: # check for factors
+  for i in range (2, num):
+    if (num % i) == 0:
+      flag = True  # if factor is found, set flag True
+      break # break out of Loop
+
+  # check if flag is True
+  if flag:
+    print(f"{num}, is not a prime number")
+  else:
+    print(f"{num}, is a prime number")
+
+# write program to print all prime numbers in an interval of 1-10
+
+#przyklad_1
+
+def liczba_pierwsza(x):
+    if x==2:
+        return True
+    if x%2 ==0 or x<=1:
+        return False
+    perw=int (x**0.5)+1
+    
+    for i in range (3, perw, 2):
+        if x%i ==0:
+            return False
+    return True
+
+def liczby_mniejsze (y):
+    list_ = []
+    for i in range(1,y+1):
+        if liczba_pierwsza(i):
+            list_.append(i)
+
+    return list_
+
+liczby_mniejsze (10)
+
+#przyklad_2
+def liczba_pierwsza_2 (x):
+
+    for num in range(2,x):
+        for i in range(2,num):
+        
+            if (num%i==0):
+                break
+        else:
+            print(num)
+            
+liczba_pierwsza_2 (10)
+
+def prime_number (x):
+
+   for num in range(2,x):
+        for i in range(2,num):
+        
+            if (num%i==0):
+                break
+        else:
+            print(num)
+            
+prime_number(10)
+
+# Python program to display all the prime numbers within an interval
+
+lower = 1
+upper = 10
+
+print("Pirme numbers between", lower, "and" , upper, "are:")
+
+for num in range (lower, upper + 1):   # all prime numbers are greater than 1 # все простые числа больше 1
+  if num > 1:
+    for i in range (2, num):
+      if (num % i) == 0:
+        break
+
+      else:
+        print(num)
+
+
+# write program to find the Factorial of a Number # Программа для нахождения факториала числа
+
+num = int(input("Enter a number: "))
+factorial = 1
+
+if num < 0:
+  print("Factorial does not exist fot negative numbers") #Факториал не существует для отрицательных чисел
+elif num == 0:
+  print("Factorial of 0 is 1") # Факториал 0 равен 1
+else: 
+  for i in range(1, num +1 ):
+    factorial = factorial * i
+  print(f'The factorial of {num} is {factorial}')
+
+  
