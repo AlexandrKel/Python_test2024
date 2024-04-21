@@ -1385,4 +1385,18 @@ else:
     factorial = factorial * i
   print(f'The factorial of {num} is {factorial}')
 
-  
+  # Replit - day 21
+
+day = 21
+temp = -15
+weight = 190.432623
+
+print(day + 3)
+print(weight  * 2)
+print(weight  / 2)
+
+# find something around you in yuor life to represent an int and a float. put them in variables
+
+age = 32
+
+bitcoin = 0.00435
