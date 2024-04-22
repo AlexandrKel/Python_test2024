@@ -1400,3 +1400,68 @@ print(weight  / 2)
 age = 32
 
 bitcoin = 0.00435
+
+
+# 22.04.2024
+
+# Write program to Display the multiplication Table #Напишите программу для отображения таблицы умножения
+
+num = int(input("Display multiplication table of: "))
+
+for i in range(1, 11):
+  print(f"{num} X {i} = {num*i}")
+
+# Write program to Display the multiplication Table #Напишите программу для отображения таблицы умножения
+
+num = int(input("Display multiplication table of: "))
+
+for i in range(1, 27):
+  print(f"{num} X {i} = {num*i}")
+
+# Write program to Print the Fibonacci sequence # Напишите программу для печати последовательности Фибоначчи 
+
+# Fibonacci sequence # Последовательность Фибоначчи 
+  # the Fibonacci sequence is a series of numbers where each number is the sum of the two precending ones, typical starting with 0 and 1,
+  # and the next number is obtained by adding the privious two numbers. This pattern continues indefinitely, generating a sequence that looks like this:
+  # 
+  # Последовательность Фибоначчи - это ряд чисел, в котором каждое число является суммой двух предыдущих, обычно начинающихся с 0 и 1,
+  # и следующее число получается путем сложения двух предыдущих чисел. Эта схема продолжается бесконечно, создавая последовательность, которая выглядит следующим образом:
+  #
+  # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 and so on
+  #
+  # Matematically , the Fibonacci sequence can be defined using following recurrence relation: 
+  #Математически последовательность Фибоначчи можно определить с помощью следующего рекуррентного соотношения: 
+  #
+  #       F(0) = 0 F(1) = 1 F(n) =F(n - 1) + F(n - 2)f orn >1
+
+
+nterms = int(input("How many terms? "))
+n1, n2 =0, 1  # first two terms
+count = 0
+#check if the number of terms is valid
+if nterms <=0:
+  print("Please enter a positive integer") #if there is only one term, return n1
+elif nterms == 1:
+  print("Fibonacci sequence upto", nterms, ":")
+  print(n1)
+#generate Fibonacci sequence 
+else:
+  print("Fibonacci sequence:")
+  while count < nterms:
+      print(n1)
+      nth = n1 + n2
+      # update values
+      n1 = n2
+      n2 = nth
+      count += 1
+
+def Fibonaci(fbncc):
+    fib1 = 0
+    fib2 = 1
+
+    for i in range(fbncc):
+        fib1, fib2 = fib2, fib1 + fib2
+
+    return fib1
+
+Fibonaci(10)
