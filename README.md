@@ -1462,6 +1462,151 @@ def Fibonaci(fbncc):
     for i in range(fbncc):
         fib1, fib2 = fib2, fib1 + fib2
 
+# 23.04.2024
+
+# Write a programm to Check Armstrong number # Напишите программу для проверки номера Armstrong
+
+# Armstrong number
+#it is number that is equal to the sum of its own digits, each raised to a power equal to the number of digits in the number.
+#это число, которое равно сумме своих цифр, каждая из которых возведена в степень, равную количеству цифр в числе.
+#
+#     for example, let's consider the number 153:
+#   it has three digits (1,5 and 3)
+#   if we calculate 1^{3}+5^{3}+3^{3}, we get 1 + 125 + 27, which is equal to 153
+#
+#so, 153 is an Armstrong number because it equals the sum of it's digits raised to the power of the number of digits in the number
+#
+#Another example is 9474:
+#   it has four digits (9, 4, 7 , asnd 4)
+#   if we calculate 9^{4}+4^{4}+7^{4}+4^{4}, we get 6561 + 256 + 2401 +256, which is also equal to 9474.
+#
+# therefore, 9474 is an Armstrong number as well
+#
+
+# example 1
+num = int(input("enter a number: "))
+
+#calculate the number of digits in num
+num_str = str(num)
+num_digits = len(num_str)
+
+# Initialize variables
+sum_of_powers = 0
+temp_num = num
+
+# calculate the sum of digits raised to the power of num digits
+
+while temp_num > 0:
+  digit = temp_num % 10
+  sum_of_powers += digit ** num_digits
+  temp_num //= 10
+
+# check if if's an Armstrong number
+if sum_of_powers == num:
+  print(f"{num} is an Armstrong number.")
+else:
+  print(f"{num} is not Armstrong number.")
+
+
+# example 2
+
+def is_armstrong(num):
+
+    # Step 2
+
+    num_str = str(num)
+    num_digits = len(num_str)
+
+    # Step 3
+
+    sum_of_powers = sum(int(digit)**num_digits for digit in num_str)
+
+    # Step 4
+
+    return sum_of_powers == num
+
+# Example usage
+
+number_to_check = 9474
+result = is_armstrong(number_to_check)
+
+if result:
+    print(f"{number_to_check} is an Armstrong number.")
+
+else:
+    print(f"{number_to_check} is not an Armstrong number.")
+
+# example 3
+
+# Python program to determine whether
+# the number is Armstrong number or not
+ 
+# Function to calculate x raised to 
+# the power y
+def power(x, y):
+     
+    if y == 0:
+        return 1
+    if y % 2 == 0:
+        return power(x, y // 2) * power(x, y // 2)
+         
+    return x * power(x, y // 2) * power(x, y // 2)
+
+# Function to calculate order of the number
+def order(x):
+ 
+    # Variable to store of the number
+    n = 0
+    while (x != 0):
+        n = n + 1
+        x = x // 10
+         
+    return n
+
+# Function to check whether the given 
+# number is Armstrong number or not
+def isArmstrong(x):
+     
+    n = order(x)
+    temp = x
+    sum1 = 0
+     
+    while (temp != 0):
+        r = temp % 10
+        sum1 = sum1 + power(r, n)
+        temp = temp // 10
+ 
+    # If condition satisfies
+    return (sum1 == x)
+ 
+# Driver code
+x = 153
+print(isArmstrong(x))
+ 
+x = 1253
+print(isArmstrong(x))
+
+# example 4
+
+# python 3 program
+# to check whether the given number is armstrong or not
+# without using power function
+ 
+n = 153  # or n=int(input()) -> taking input from user
+s = n  # assigning input value to the s variable
+b = len(str(n))
+sum1 = 0
+while n != 0:
+    r = n % 10
+    sum1 = sum1+(r**b)
+    n = n//10
+if s == sum1:
+    print("The given number", s, "is armstrong number")
+else:
+    print("The given number", s, "is not armstrong number")
+ 
+# This code is contributed by Gangarajula Laxmi
+
     return fib1
 
 Fibonaci(10)
