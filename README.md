@@ -1610,3 +1610,72 @@ else:
     return fib1
 
 Fibonaci(10)
+
+
+# 24.04.2024
+
+    #To find an Armstrong number python in an interval, we can take the help of two Python concepts, include:
+    #
+    #if-else statements
+    #The while loop
+    #An Armstrong number is a positive integer that has a base of n such that:
+    #
+    #PQR= P^n+Q^n+R^n
+    #
+    #From the above equation, we can derive that an Armstrong number is a number whose sum of individual digits to the power of n is equal to the original number itself. 
+
+
+    #Чтобы найти число Армстронга python в интервале, мы можем воспользоваться двумя концепциями Python, включая:
+    #
+    #операторы if-else
+    #цикл while
+    #Число Армстронга - это целое положительное число с основанием n, такое, что:
+    #
+    #PQR= P^n+Q^n+R^n
+    #
+    #Из приведенного выше уравнения можно сделать вывод, что число Армстронга - это число, сумма отдельных цифр которого в степени n равна самому исходному числу. 
+
+
+
+# write a Program to find Armstrong number in an interval # Напишите программу для нахождения числа Армстронга в интервале
+
+# input the interval from the user #ввод интервала от пользователя
+
+lower = int(input("Enter the lower limit of the intervval: "))
+upper = int(input("Enter the upper limit of the intervval: "))
+
+for num in range (lower, upper + 1): #iterate through the numbers # перебирайте числа
+  order = len(str(num)) # find the number of digits in 'num' # найдите количество цифр в числе 'num'
+  temp_num = num
+  sum = 0
+
+  while temp_num > 0:
+    digit = temp_num % 10
+    sum += digit ** order
+    temp_num //= 10
+
+  # check if 'num' is Armstrong number # проверить, является ли 'num' числом Армстронга
+  if num ==sum:
+    print(num)
+
+# example 2
+
+lower = 100
+upper = 2000
+
+for num in range(lower, upper + 1):
+
+   # order of number
+   order = len(str(num))
+    
+   # initialize sum
+   sum = 0
+
+   temp = num
+   while temp > 0:
+       digit = temp % 10
+       sum += digit ** order
+       temp //= 10
+
+   if num == sum:
+       print(num)
