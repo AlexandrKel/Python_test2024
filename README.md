@@ -1774,14 +1774,14 @@ def natural(n):
 terms = int(input("Enter number of terms: "))
 natural(terms)
 
-#if number < 0:
-#  print("Enter a positive number: ")
-#else:
-#  totalSum = 0
-#while (number > 0):
-#    totalSum += number
-#    number -= 1
-#    print ("The sum is" , totalSum)
+if terms < 0:
+  print("Enter a positive number: ")
+else:
+  totalSum = 0
+while (terms > 0):
+    totalSum += terms
+    terms -= 1
+    print ("The sum is" , totalSum)
 
 num = int(input('Enter the number : '))
 sum = 0
