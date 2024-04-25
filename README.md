@@ -1679,3 +1679,113 @@ for num in range(lower, upper + 1):
 
    if num == sum:
        print(num)
+
+
+# 25.04.2024
+
+# Wirte program to Find the Sum of Natural Numbers
+
+# Natural numbers are a set of positive integers that are used to count and order objects.
+# They are the numbers that typical start from 1 and continue indefinitely, including all the whole numbers greater than 0.
+#In mathematical notation, the ste of natural numbers is often denoted as "N" and can be expressed as:
+#
+#         N = 1,2,3,4,5,6,7,8,9...
+#
+# Натуральные числа - это набор целых положительных чисел, которые используются для подсчета и упорядочивания объектов.
+# Это числа, которые типично начинаются с 1 и продолжаются бесконечно, включая все целые числа, большие 0.
+# В математической нотации множество натуральных чисел часто обозначается как "N" и может быть выражено как:
+#
+
+
+limit = int(input("Enter the limit: "))
+
+sum = 0 # initialize the sum
+
+# use a for loop to calculate the sum of natural numbers # используйте цикл for для вычисления суммы натуральных чисел
+
+for i in range(1, limit +1):
+  sum += i
+
+  #print the sum
+  print ("The sum of natural numbers up to", limit, "is:", sum)
+
+  limit = int(input("Enter the limit: "))
+
+sum = 0 # initialize the sum
+
+# use a for loop to calculate the sum of natural numbers # используйте цикл for для вычисления суммы натуральных чисел
+
+for i in range(2, limit +1):
+  sum += i
+
+  #print the sum
+  print ("The sum of natural numbers up to", limit, "is:", sum)
+
+  limit = int(input("Enter the limit: "))
+
+sum = 0 # initialize the sum
+
+# use a for loop to calculate the sum of natural numbers # используйте цикл for для вычисления суммы натуральных чисел
+
+for i in range(3, limit +1):
+  sum += i
+
+  #print the sum
+  print ("The sum of natural numbers up to", limit, "is:", sum)
+
+  # Sum of natural numbers up to num
+
+num = 16
+
+if num < 0:
+   print("Enter a positive number")
+else:
+   sum = 0
+   # use while loop to iterate until zero
+   while(num > 0):
+       sum += num
+       num -= 1
+   print("The sum is", sum)
+
+   n = int(input("Enter a number: "))
+i = 1
+while i<n:
+    print(i)
+    i = i + 1
+
+    n = int(input("enter a number: "))
+i = 1
+sum = 0
+while (i <= n):
+    sum = sum + i
+    i = i + 1
+print("The sum is: ", sum)
+
+num = 20
+sum_of_numbers = 0
+while(num > 0):
+    sum_of_numbers += num
+    num -= 1
+print("The sum is", sum_of_numbers)
+
+def natural(n):
+    sumOfn = (n * (n + 1))/2
+
+terms = int(input("Enter number of terms: "))
+natural(terms)
+
+#if number < 0:
+#  print("Enter a positive number: ")
+#else:
+#  totalSum = 0
+#while (number > 0):
+#    totalSum += number
+#    number -= 1
+#    print ("The sum is" , totalSum)
+
+num = int(input('Enter the number : '))
+sum = 0
+while 0<num:
+    sum += num
+    num -= 1
+print(f'The sum of the number is {sum}')
