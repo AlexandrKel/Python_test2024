@@ -1789,3 +1789,98 @@ while 0<num:
     sum += num
     num -= 1
 print(f'The sum of the number is {sum}')
+
+
+# 27.04.2024
+
+# write a program to find LCM (least Common Multiplane)
+#
+#LCM is the smallest multiple that is exactly divisible by two or more numbers
+# 
+#       {lcm} (a,b)={\frac {|ab|}{\gcd(a,b)}}.} 
+#
+# for more than two numbers, you can find the LCM step by step, talking the LCM of pairs of numbers at a time until you reach the last pair.
+#
+# Note: GCD stands for Greatest Common Divisor
+#
+#
+# написать программу для нахождения LCM (наименьшего общего мультиплана)
+# LCM - наименьшее кратное, которое в точности делится на два или более чисел.
+# Для более чем двух чисел вы можете находить LCM шаг за шагом, по очереди называя LCM пар чисел, пока не дойдете до последней пары.
+#   Примечание: GCD означает наибольший общий делитель.
+#
+
+    #EXAMPLE 1
+# Python Program to find the L.C.M. of two number
+
+def compute_lcm(x, y):
+  if x > y:
+    greater = x
+  else:
+    greater = y
+  while(True):
+    if((greater % x == 0) and (greater % y == 0)):
+      lcm = greater
+      break
+    greater += 1
+  return lcm
+
+nym1 = int(input('Enter the number: '))
+nym2 = int(input('Enter the number: '))
+
+print("The L.C.M. is", compute_lcm(num1, num2))
+
+
+  #EXAMPLE 2
+
+def LCM(a, b):
+    greater = max(a, b)
+    smallest = min(a, b)
+    for i in range(greater, a*b+1, greater):
+        if i % smallest == 0:
+            return i
+
+# Driver program to test above function
+if __name__ == '__main__':
+    a = 54
+    b = 24
+    print("LCM of", a, "and", b, "is", LCM(a, b))
+
+  #EXAMPLE 3
+
+import math
+
+def lcm_using_gcd(a, b):
+    gcd = math.gcd(a, b)
+    lcm = (a * b) // gcd
+    return lcm
+
+# Example usage:
+num1 = 54
+num2 = 24
+print("LCM of", num1, "and", num2, "is:", lcm_using_gcd(num1, num2))
+
+  #EXAMPLE 4
+
+def prime_factors(n):
+    factors = []
+    divisor = 2
+    while n > 1:
+        while n % divisor == 0:
+            factors.append(divisor)
+            n //= divisor
+        divisor += 1
+    return factors
+
+def lcm_using_prime_factors(a, b):
+    factors_a = prime_factors(a)
+    factors_b = prime_factors(b)
+    lcm = 1
+    for factor in set(factors_a + factors_b):
+        lcm *= factor ** max(factors_a.count(factor), factors_b.count(factor))
+    return lcm
+
+# Example usage:
+num1 = 54
+num2 = 24
+print("LCM of", num1, "and", num2, "is:", lcm_using_prime_factors(num1, num2))
