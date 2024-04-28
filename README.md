@@ -1934,8 +1934,8 @@ def hcfnaive(a, b):
     else:
         return hcfnaive(b, a % b)
  
-a = 60
-b = 48
+a = 54
+b = 24
  
 # prints 12
 print("The gcd of 54 and 24 is : ", end="")
@@ -1957,8 +1957,8 @@ def computeGCD(x, y):
              
     return gcd
  
-a = 60
-b = 48
+a = 54
+b = 24
  
 # prints 12
 print ("The gcd of 54 and 24 is : ", end="")
@@ -1974,8 +1974,8 @@ def computeGCD(x, y):
        x, y = y, x % y
     return abs(x)
  
-a = 60
-b = 48
+a = 54
+b = 24
  
 # prints 12
 print ("The gcd of 54 and 24 is : ",end="")
