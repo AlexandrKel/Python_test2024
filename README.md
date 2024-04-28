@@ -1884,3 +1884,99 @@ def lcm_using_prime_factors(a, b):
 num1 = 54
 num2 = 24
 print("LCM of", num1, "and", num2, "is:", lcm_using_prime_factors(num1, num2))
+
+
+# 28.04.2024
+
+# write program to find Highest Common Factor # Наибольший общий фактор
+
+# HCF is the largest positive integer that divides two or more numbers withiut leaving a remainder
+# Formula: for two numbers a and b,  the HCF can be found using the formula:
+# 
+#           HCF(a,b) = GCD(a,b)
+# 
+# for more than two numbers, you can find the HCF by taking the GCD of pairs of numbers at a time until you reach the last pair.
+# 
+#  HCF - это наибольшее положительное целое число, которое делит два или более чисел без остатка.
+#   Формула: для двух чисел a и b можно найти HCF по формуле:
+# 
+# Для более чем двух чисел вы можете найти HCF, взяв GCD пар чисел за один раз, пока не дойдете до последней пары.
+# 
+
+
+# Python program to find H.C.F. of two numbers
+
+def compute_hcf(x,y): #define a function
+
+# choose the smaller number
+  if x > y:
+    smaller = y
+  else:
+    smaller = x
+  for i in range(1, smaller+1):
+    if((x % i == 0) and (y % i == 0)):
+      hcf = i
+  return hcf
+
+num1 = int(input('Enter the number: '))
+num2 = int(input('Enter the number: '))
+
+print("The H.C.F. is", compute_hcf(num1, num2))
+
+#example 2
+
+# Python code to demonstrate naive
+# method to compute gcd ( recursion )
+ 
+def hcfnaive(a, b):
+    if(b == 0):
+        return abs(a)
+    else:
+        return hcfnaive(b, a % b)
+ 
+a = 60
+b = 48
+ 
+# prints 12
+print("The gcd of 54 and 24 is : ", end="")
+print(hcfnaive(54, 24))
+
+# example 3
+# Python code to demonstrate naive
+# method to compute gcd ( Loops )
+ 
+def computeGCD(x, y):
+ 
+    if x > y:
+        small = y
+    else:
+        small = x
+    for i in range(1, small + 1):
+        if((x % i == 0) and (y % i == 0)):
+            gcd = i
+             
+    return gcd
+ 
+a = 60
+b = 48
+ 
+# prints 12
+print ("The gcd of 54 and 24 is : ", end="")
+print (computeGCD(54,24))
+
+# example 4
+# Python code to demonstrate naive
+# method to compute gcd ( Euclidean algo )
+ 
+ 
+def computeGCD(x, y):
+    while(y):
+       x, y = y, x % y
+    return abs(x)
+ 
+a = 60
+b = 48
+ 
+# prints 12
+print ("The gcd of 54 and 24 is : ",end="")
+print (computeGCD(54, 24))
