@@ -1980,3 +1980,52 @@ b = 24
 # prints 12
 print ("The gcd of 54 and 24 is : ",end="")
 print (computeGCD(54, 24))
+
+
+# 29.04.2024
+
+# Write program to convert to Binary,Octal and Hexadecimal
+
+#       How can we manualy convert a decimal number to binary, octal and hexadecimal?
+#       
+#       Converting a decimal number to binary, octal or hexadecimal involves dividing the decimal number the base noting the remainders at each step.
+#       Here's a simple example:
+#       
+#       Let's convert the decimal number 27 to binary, octal and hexadecimal
+#       
+#       1.  Binary:
+#                   divide 27 by 2. Quontient is 13, remainder is 1. Note the remainder.
+#                   divide 13 by 2. Quontient is 6, remainder is 1. Note the remainder.
+#                   divide 6 by 2. Quontient is 3, remainder is 0. Note the remainder.
+#                   divide 3 by 2. Quontient is 1, remainder is 1. Note the remainder.
+#                   divide 1 by 2. Quontient is 0, remainder is 1. Note the remainder.
+#                  
+#       Reading the remainders from bottom to top, the binary rerpesentation of 27 is 11011
+#       2. Octal:
+#       
+#                    divide 27 by 8. Quontient is 3, remainder is 3. Note the remainder.      
+#                    divide 3 by 8. Quontient is 0, remainder is 3. Note the remainder.     
+#       
+#       Reading the remainders from bottom to top, the binary rerpesentation of 27 is 33
+#       3. Hexadecimal:
+#       
+#                    divide 27 by 16. Quontient is 1, remainder is 11 (B in hexadecimal). Note the remainder.      
+#                    Reading the remainders, the hexadecimal representation of 27 is 1B.     
+#       
+#       so, in summary:
+#       
+#       Binary: 27 in deciaml is 11011 in binary
+#       Octal: 27 in deciaml is 33 in binary
+#       Hexadecimal: 27 in deciaml is B in hexadecimal
+#       
+#       Как вручную преобразовать десятичное число в двоичное, восьмеричное и шестнадцатеричное?
+#       Преобразование десятичного числа в двоичное, восьмеричное или шестнадцатеричное предполагает деление десятичного числа на основание, отмечая остатки на каждом шаге.
+#       Переведем десятичное число 27 в двоичную, восьмеричную и шестнадцатеричную системы счисления
+
+
+dec_num = int(input('Enter a decimal number: '))
+
+print("the decimal value of", dec_num, "is:")
+print(bin(dec_num), "in binary.")
+print(oct(dec_num), "in octal.")
+print(hex(dec_num), "in hexadecimal.")
