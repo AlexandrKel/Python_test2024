@@ -2029,3 +2029,27 @@ print("the decimal value of", dec_num, "is:")
 print(bin(dec_num), "in binary.")
 print(oct(dec_num), "in octal.")
 print(hex(dec_num), "in hexadecimal.")
+
+#06.05.2024
+
+
+# write program to find ASCII value of a character
+
+#       ASCII value:
+#       
+#       ASCII, or American standard Code for In fromation Interchange, is a character encoding standrd  that uses numeric values to represent characters.
+#       Each ASCII character is assigned a unique 7-bit or 8-bin binary number, allowing computers to exchange information and display text in a consistent way.
+#       The ACSII values range from 0 to 127(for 7-bit ASCII) or 0 to 255 (fro 8-bit ASCII), with each value correspondending to a specific character, such as letters,
+#       digits, punctuation marks, and control characters.
+#       
+#       
+#       ASCII (American standard Code for In fromation Interchange) - это стандарт кодировки символов, в котором для их представления используются числовые значения.
+#       Каждому символу ASCII присваивается уникальный 7- или 8-разрядный двоичный номер, что позволяет компьютерам обмениваться информацией и отображать текст в последовательном виде.
+#       Значения ACSII варьируются от 0 до 127 (для 7-битного ASCII) или от 0 до 255 (для 8-битного ASCII), причем каждое значение соответствует определенному символу, например, букве,
+#        цифры, знаки препинания и управляющие символы.
+#       
+
+
+char = str(input("Enter the character: "))
+print("The ASCII value of ' "+ char + " ' is", ord(char))
+
