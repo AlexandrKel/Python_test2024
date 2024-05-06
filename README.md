@@ -2053,3 +2053,27 @@ print(hex(dec_num), "in hexadecimal.")
 char = str(input("Enter the character: "))
 print("The ASCII value of ' "+ char + " ' is", ord(char))
 
+
+text = 'Pythön is interesting'
+
+# replace ö with its ascii value
+print(ascii(text))
+
+# Output: 'Pyth\xf6n is interesting'
+
+text1 = '√ represents square root'
+
+# replace √ with ascii value 
+print(ascii(text1))
+
+text2 = 'Thör is coming'
+
+# replace ö with ascii value 
+print(ascii(text2))
+
+list = ['Python', 'öñ', 5]
+
+# ascii() with a list
+print(ascii(list))
+
+
